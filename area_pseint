@@ -1,0 +1,8 @@
+Proceso area_rectangulo
+	escribir "Ingrese la base";
+	leer a;
+	escribir "ingrese la altura";
+	leer b;
+	c<-a*b;
+	escribir " el area del rectangulo es " c;
+FinProceso
