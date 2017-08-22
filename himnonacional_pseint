@@ -1,0 +1,8 @@
+Proceso himno_nacional
+	escribir "Primera Estrofa del Himno Nacional"
+	escribir ""
+	escribir "Bolivianos el hado propicio"     
+	escribir "Coronó nuestros votos y anhelos"     
+	escribir "Es ya libre, ya libre este suelo"   
+	escribir "Ya cesó su servil condición"    
+FinProceso
