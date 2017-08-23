@@ -1,0 +1,15 @@
+#include <iostream>
+#include "conio.h"
+
+using namespace std;
+
+int main()
+{
+    cout <<"Primera Estrofa del Himno Nacional"<< endl;
+    cout <<"Bolivianos el hado propicio"<< endl;
+    cout <<"Corono nuestros votos y anhelos"<< endl;
+    cout <<"Es ya libre,ya libre este suelo"<< endl;
+    cout <<"Ya ceso su servil condicion"<< endl;
+    getch();
+    return 0;
+}
