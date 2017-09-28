@@ -1,0 +1,35 @@
+Algoritmo menu
+		escribir "MENU"
+		s<-0
+		repetir
+			escribir "1.Hamburguesas........................Bs 3";
+			escribir "2.Hamburguesas con queso..............Bs 5";
+			escribir "3.Papas fritas........................Bs 2";
+			escribir "4.Soda................................Bs 2.5";
+			escribir "0.Salir";
+			escribir "Ingresar un numero de opcion del menu";
+			leer opcion;
+			escribir "Ingresar la cantidad";
+			leer cantidad;
+			segun opcion hacer
+				1:
+					totalp<-cantidad*3;
+					s<-s+totalp;
+				2:
+					totalp<-cantidad*5;
+					s<-s+totalp;
+				3:
+					totalp<-cantidad*2;
+					s<-s+totalp;
+				4:
+					totalp<-cantidad*2.5;
+					s<-s+totalp;
+				0:
+					escribir "salir";
+					de otro modo
+					escribir "opcion invalida";
+			FinSegun
+		Hasta Que opcion=0
+		escribir "El total de la cuenta es",s;
+FinAlgoritmo
+
