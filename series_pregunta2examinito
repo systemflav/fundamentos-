@@ -1,0 +1,43 @@
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include <cmath>
+
+using namespace std;
+
+int main()
+{
+
+    int X,N,C=1,E=0,L=1,A;
+   	float NUM,SE,M,S=0,P=1;
+   	cout<< "Cual es su valor x?";
+	cin>> X;
+	cout<< "Hasta que numero par se va realizar la serie?";
+	cin>> N;
+	A=(N/2);
+	C=1;
+	E=0;
+	P=1;
+	S=0;
+	L=1;
+	while (C<=A) {
+		E=E+2;
+		M=pow(X,E);
+		while (L<=E) {
+			P=P*L;
+			L=L+1;
+		}
+		if (C%2==0)
+			NUM=M/P;
+		else
+            NUM=(M/P)*(-1);
+            
+		S=S+NUM;
+		C=C+1;
+	}
+	SE=S+(3.14/5);
+	cout<< "LA SUMA ES"<<SE;
+    getch();
+    return 0;
+
+}
