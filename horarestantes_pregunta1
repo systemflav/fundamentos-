@@ -1,0 +1,66 @@
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+
+using namespace std;
+
+int main()
+{
+    int hora1,hora2,minuto1,minuto2,segundo1,segundo2,horarestante,hora,minutos,segundos;
+    cout <<"Ingrese la primera hora";
+    cin >> hora1;
+    while (hora1>24){
+            cout<<"ingrese otra hora";
+            cin>> hora1;
+    }
+    cout <<"Ingrese los minutos de la primera hora";
+    cin >> minuto1;
+    while (minuto1>60){
+            cout<<"ingrese otros minutos";
+            cin>> minuto1;
+    }
+    cout <<"Ingrese los segundos de la primera hora";
+    cin >> segundo1;
+    while (segundo1>60){
+            cout<<"ingrese otros segundos";
+            cin>>segundo1;
+    }
+    cout <<"Ingrese la segunda hora";
+    cin >> hora2;
+     while (hora2>24){
+            cout<<"ingrese otra hora";
+            cin>>hora2;
+     }
+    cout <<"Ingrese los minutos de la segunda hora";
+    cin >> minuto2;
+    while (minuto2>60){
+            cout<<"ingrese otros minutos";
+            cin>> minuto2;
+    }
+    cout <<"Ingrese los segundos de la segunda hora";
+    cin >> segundo2;
+    while (segundo2>60){
+            cout<<"ingrese otros segundos";
+            cin>>segundo2;
+    }
+    hora1=((hora1*3600)+(minuto1*60)+(segundo1));
+    hora2=((hora2*3600)+(minuto2*60)+(segundo2));
+    if (hora1>hora2)
+        horarestante=hora1-hora2;
+    else
+        horarestante=hora2-hora1;
+    if (horarestante<60)
+        cout<< horarestante <<"segundos";
+    else{
+        hora= int (horarestante/3600);
+        minutos= int ((horarestante-(hora*3600))/60);
+        segundos= int (horarestante-((hora*3600)+(minutos*60)));
+    }
+    cout<< hora << "horas" << endl;
+    cout<< minutos << "minutos" << endl;
+    cout<< segundos << "segundos" << endl;
+
+    getch();
+    return 0;
+
+}
