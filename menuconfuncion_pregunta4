@@ -1,0 +1,70 @@
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+
+
+using namespace std;
+
+ void Hola ();
+ void Menor (int a , int b , int c );
+ void Absoluto (int x);
+
+int main()
+{
+    int opcion,x,a,b,c;
+    do {
+    cout<<"ELEGIR UNA OPCION DEL MENU";
+    cout<< "MENU"<< endl;
+    cout<< "1.......HOLA" << endl;
+    cout<< "2.......CONOCER EL NUMERO MENOR" << endl;
+    cout<< "3.......OBTENER VALOR ABSOLUTO"<< endl;
+    cout<< "4.......SALIR" << endl;
+    cin>> opcion;
+        switch(opcion){
+        case 1:
+            Hola();
+            break;
+        case 2:
+            cout<<"Escriba los numeros";
+            cin>>a;
+            cin>>b;
+            cin>>c;
+            Menor(a,b,c);
+            break;
+        case 3:
+            cout<<"Escriba el numero real";
+            cin>>x;
+            Absoluto(x);
+            break;
+        case 4:
+            break;
+        default:
+            cout<< "Opcion invalida"<<endl;
+        }
+    }while(opcion!=4);
+      getch();
+      return 0;
+
+    }
+    void Hola (){
+        cout<< "HOLA"<< endl;
+    }
+    void Menor (int a , int b , int c ){
+        int menor;
+        if (a<b && a<c)
+            menor=a;
+        if (b<a && b<c)
+            menor=b;
+        if (c<b && c<a)
+            menor=c;
+        cout<<"El menor numero es "<< menor<<endl;
+    }
+    void Absoluto (int x){
+        if (x<0)
+            x=(x*-1);
+        else
+            x=x*1;
+        cout << "El valor absoluto del numero es"<< x<<endl;
+    }
+
+
