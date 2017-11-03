@@ -1,0 +1,49 @@
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include "math.h"
+
+using namespace std;
+
+float serie(float x ,float n);
+
+int main()
+{
+ float x,n,s;
+	cout<<"ingrese el valor de x";
+	cin>>x;
+	cout<<"ingrese hasta que numero se repetira la serie";
+	cin>>n;
+	s=serie(x,n);
+	cout<<"la suma de la serie es "<< s;
+	getch();
+	return 0;
+}
+float serie(float x,float n){
+	float s,e,m,num,se;
+	int c,p,l,f;
+	s=0;
+	c=1;
+	p=1;
+	l=1;
+	e=0;
+	f=1;
+	while (c<=n){
+		e=e+1;
+		m=pow(x,e);
+		f=f+1;
+		while(l<=f){
+            p=p*l;
+            l=l+1;
+		}
+		if(c%2==0)
+            num=(m/p);
+        else
+            num=(m/p)*(-1);
+    s=s+num;
+    c=c+1;
+	}
+	se=(3.15+s);
+	return se;
+}
+
