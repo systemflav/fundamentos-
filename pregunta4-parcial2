@@ -1,0 +1,30 @@
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+
+using namespace std;
+
+int num(int x);
+
+void main()
+
+{
+	int x,n;
+	cout<< "ingrese su numero";
+	cin>> x;
+	n=num(x);
+	cout<<"la suma es "<< n;
+	getch();
+}
+int num(int x){
+int m,s;
+s=0;
+	while(x!=0){
+		m=x%10;
+		if (m%2!=0)
+			s=s+m;
+		x= int (x/10);
+	}
+	return s;
+}
+
