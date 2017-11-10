@@ -1,0 +1,44 @@
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+
+using namespace std;
+
+bool curioso(int n);
+
+
+void main()
+{
+	int n;
+	bool m;
+	cout<<"Ingrese el numero";
+	cin>> n;
+	m=curioso(n);
+	if (m==true)
+		cout<<"Es un numero curioso";
+	else
+		cout<<"No es numero curioso";
+	getch();
+}
+bool curioso(int n){
+	int s,l,p,m,x;
+	bool q;
+	s=0;
+	x=n;
+	while(n!=0){
+		m=(n%10);
+		p=1;
+		l=1;
+		while(l<=m){
+			p=p*l;
+			l=l+1;
+		}
+	s=s+p;
+	n= int (n/10);
+	}
+	if (s==x)
+		q=true;
+	else
+		q=false;
+	return q;
+}
