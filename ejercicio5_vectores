@@ -1,0 +1,34 @@
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#define MAX 100
+#include <stdlib.h>
+
+using namespace std;
+
+void mostraraleatorio(int a[],int n , int mi , int ma);
+
+int main()
+{
+    int a[MAX],n,mi,ma;
+    do{
+        cout<<"De que tamano sera la serie?"<<endl;
+        cin>>n;
+    }while(n<0 || n>MAX);
+    cout<<"Cual es su valor minimo?";
+    cin>>mi;
+    cout<<"Cual es su valor maximo?";
+    cin>>ma;
+    mostraraleatorio(a,n,mi,ma);
+    getch();
+    return 0;
+}
+void mostraraleatorio(int a[],int n , int mi , int ma){
+    for (int i=0; i<n ; i++){
+        a[i]=rand()%((ma-mi)+mi);
+        cout<< a[i];
+    }
+}
+
+
+
